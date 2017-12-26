@@ -1,0 +1,16 @@
+.image-filter-section {
+    padding: 10px;
+}
+
+.filter-title {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+}
+
+.filter-component input {
+    width: 100%;
+}
+
+button:focus {
+    outline: 0px;
+}

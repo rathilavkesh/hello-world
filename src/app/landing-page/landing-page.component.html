@@ -1,0 +1,16 @@
+<!-- flex container displaying children as a column -->
+<section class="app flex-container" fxLayout="column" fxLayoutAlign="start stretch">
+  <mat-toolbar color="primary" flex>
+    <app-header></app-header>
+  </mat-toolbar>
+
+  <div fxFlex fxLayout="column" fxLayoutAlign="start stretch">
+    <div class="text-center">
+      <a href="" [routerLink]="['/imageSearch']">Go to Image Search</a>
+    </div>
+  </div>
+
+  <mat-toolbar flex>
+    <app-footer></app-footer>
+  </mat-toolbar>
+</section>
