@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import { ImageResult } from './image-result.interface';
 import { ImageSearchService } from '../service/image-search.service';
 import { ImageFilter } from '../modal/image-filter.class';
+import { ImageResult } from '../modal/image-result.interface';
 
 @Component({
   selector: 'app-image-search-result',
@@ -46,6 +46,18 @@ export class ImageSearchResultComponent implements OnInit {
 
   removeSearchInput(filter: ImageFilter): void {
     this.imageSearchService.removeImageFilter(filter);
+  }
+
+  displayImageDetailSection(selectedImageResult: ImageResult) {
+    this.imageSearchService.setSelectedImageForDetailsView(selectedImageResult);
+  }
+
+  displaySearchResultTileView(): boolean {
+    return !this.imageSearchService.showImageSearchDetailView();
+  }
+
+  displaySearchResultDetailsView(): boolean {
+    return this.imageSearchService.showImageSearchDetailView();
   }
 
 }

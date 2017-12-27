@@ -39,6 +39,9 @@ button:focus {
     background-repeat: no-repeat;
 }
 
+.search-result:hover {
+    cursor: pointer;
+}
 
 @media (max-width: 600px) {  
     .search-result {
