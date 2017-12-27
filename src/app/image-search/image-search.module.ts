@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ImageSearchComponent } from './image-search.component';
 import { ImageSearchFilterComponent } from './image-search-filter/image-search-filter.component';
 import { ImageSearchResultComponent } from 'app/image-search/image-search-result/image-search-result.component';
+import { ImageSearchService } from './service/image-search.service';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { ImageSearchResultComponent } from 'app/image-search/image-search-result
     ImageSearchComponent,
     ImageSearchFilterComponent,
     ImageSearchResultComponent
+  ],
+  providers: [
+    ImageSearchService
   ]
 })
 export class ImageSearchModule { }
